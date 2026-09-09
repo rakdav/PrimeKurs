@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "361433078013",
+    "project_id": "firestore-8e3b8",
+    "storage_bucket": "firestore-8e3b8.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361433078013:android:e40bc9b66449694d4c0694",
+        "android_client_info": {
+          "package_name": "ro.alexmamo.firestorecleanarchitecture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa-OoecdVzckOZAntGxV_pllFFgXccJW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:361433078013:android:46dc34e887adeb494c0694",
+        "android_client_info": {
+          "package_name": "ru.kbk.primekurs"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDa-OoecdVzckOZAntGxV_pllFFgXccJW4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
