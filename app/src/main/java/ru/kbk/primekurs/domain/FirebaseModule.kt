@@ -1,4 +1,4 @@
-package ru.kbk.primekurs.data
+package ru.kbk.primekurs.domain
 
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore

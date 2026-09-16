@@ -1,8 +1,8 @@
-package ru.kbk.primekurs.data.repository
+package ru.kbk.primekurs.domain.repository
 
 import kotlinx.coroutines.tasks.await
-import ru.kbk.primekurs.data.FirebaseModule
-import ru.kbk.primekurs.data.model.User
+import ru.kbk.primekurs.domain.FirebaseModule
+import ru.kbk.primekurs.domain.model.User
 
 class AuthFirebaseRepository
 {
@@ -25,19 +25,19 @@ class AuthFirebaseRepository
             Result.failure(e)
         }
     }
-    suspend fun login(email: String,password: String): Result<User>{
+    suspend fun Login(email: String,password: String): Result<User>{
         return try {
             val result=auth.signInWithEmailAndPassword(email,password).await()
             val uid=result.user?.uid?:throw Exception("UID null")
             val snapshot=firestore.collection("persons").document(uid).get().await()
-            var user=snapshot.toObject(User::class.java)?:throw Exception("User not found")
+            val user=snapshot.toObject(User::class.java)?:throw Exception("User not found")
             Result.success(user)
         }
         catch (e: Exception){
             Result.failure(e)
         }
     }
-    fun logout(){
+    fun Logout(){
         auth.signOut()
     }
 }

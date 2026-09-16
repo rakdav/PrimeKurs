@@ -1,4 +1,4 @@
-package ru.kbk.primekurs.data.model
+package ru.kbk.primekurs.domain.model
 
 data class User(
     val uid: String="",
