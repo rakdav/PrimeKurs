@@ -13,6 +13,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import ru.kbk.primekurs.domain.model.onboardingPages
+import ru.kbk.primekurs.presentation.auth.LoginScreen
 import ru.kbk.primekurs.presentation.onboarding.AppScreen
 import ru.kbk.primekurs.ui.theme.PrimeKursTheme
 import ru.kbk.primekurs.presentation.onboarding.MainViewModel
@@ -40,9 +41,7 @@ class MainActivity : ComponentActivity() {
                     }
                     AppScreen.MAIN -> {
                         // Ваш основной экран приложения
-                        Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                            Text("Main App Screen")
-                        }
+                        LoginScreen()
                     }
                 }
             }

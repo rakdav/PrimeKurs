@@ -2,6 +2,7 @@ package ru.kbk.primekurs.domain.model
 
 import ru.kbk.primekurs.R
 
+
 data class OnboardingPage(
     val title: String,
     val description: String,

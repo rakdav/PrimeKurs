@@ -11,13 +11,14 @@ class AuthFirebaseRepository
     suspend fun Register(
         email: String,
         password: String,
-        name: String,
-        role: String="person"
+        userName: String,
+        fullName: String,
+        phone: String
         ): Result<User> {
         return try {
             val result=auth.createUserWithEmailAndPassword(email,password).await()
             val uid=result.user?.uid?:throw Exception("UID null")
-            val user= User(uid = uid,email=email,name=name, role = role)
+            val user= User(uid = uid,email=email, userName = userName, fullName = fullName, phone = phone)
             firestore.collection("persons").document(uid).set(user).await()
             Result.success(user)
         }
